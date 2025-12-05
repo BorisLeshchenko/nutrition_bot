@@ -1,10 +1,42 @@
+# Core API Framework
 fastapi==0.115.0
 uvicorn[standard]==0.32.0
+
+# Database & ORM
 sqlalchemy==2.0.37
 asyncpg==0.30.0
-psycopg2-binary==2.9.12
+
+# Data validation
 pydantic==2.7.3
 pydantic-settings==2.2.1
+
+# Telegram Bot
 aiogram==3.12.0
-python-dotenv==1.0.1
+
+# HTTP Client
 httpx==0.27.2
+
+# Configuration
+python-dotenv==1.0.1
+
+# gRPC (для CV & NLP modules)
+grpcio==1.64.1
+grpcio-tools==1.64.1
+protobuf==5.28.0
+
+# Redis & Queue
+redis==5.0.1
+rq==1.16.1
+
+# MongoDB (для AI-профилей)
+pymongo==4.10.1
+motor==3.4.0
+
+# Load testing (для НИР)
+locust==2.17.0
+
+# Logging (базовое, без Prometheus на MVP)
+python-json-logger==2.0.7
+
+# Utilities
+pytz==2024.1

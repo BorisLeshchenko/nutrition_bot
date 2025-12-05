@@ -2,8 +2,10 @@
 Конфигурация приложения
 """
 from pydantic_settings import BaseSettings
-from typing import Optional
+from pathlib import Path
 
+# Путь к корню проекта
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 class Settings(BaseSettings):
     """Основные настройки приложения"""
@@ -21,7 +23,7 @@ class Settings(BaseSettings):
     SERVER_PORT: int = 8000
     
     class Config:
-        env_file = ".env"
+        env_file = BASE_DIR / ".env"  # Явный путь к .env в корне проекта
         env_file_encoding = "utf-8"
         case_sensitive = True
 
